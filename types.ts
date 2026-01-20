@@ -2,7 +2,8 @@
 export enum LineType {
   TENEKE_800G = 'TENEKE_800G',
   VAKUM = 'VAKUM',
-  YAGLI_10KG = 'YAGLI_10KG'
+  YAGLI_10KG = 'YAGLI_10KG',
+  KURU_SELE = 'KURU_SELE'
 }
 
 export enum VakumMachine {
