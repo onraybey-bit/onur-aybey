@@ -25,11 +25,13 @@ const ReverseCalculator: React.FC = () => {
     } else if (line === LineType.VAKUM) {
       unitsPerBox = boxConfig;
       unitWeight = machine === VakumMachine.VAKUM_5_800G ? 0.8 : 0.5;
-      fireMultiplier = 1.035;
+      // Net'ten Brüt'e dönüş için: Brüt = Net / (1 - 0.04) => 1 / 0.96 = 1.0416...
+      fireMultiplier = 1 / 0.96;
     } else if (line === LineType.YAGLI_10KG) {
       unitWeight = 10;
       unitsPerBox = 1;
-      fireMultiplier = 1.025;
+      // %4 fire için: 1 / 0.96
+      fireMultiplier = 1 / 0.96;
     } else if (line === LineType.KURU_SELE) {
       if (kuruPack === '800g') {
         unitWeight = 0.8;
